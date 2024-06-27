@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>InovPay</title>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="custom.css">
+
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <style>
+    body{ background: #000 !important; }
+    .input-field{
+        border: 1px solid;
+        padding: 12px 20px !important;
+        background: rgb(255 255 255 / 6%);
+        border: 10px solid;
+        border-image-slice: 1;
+        border-width: 1px;
+        border-image-source: linear-gradient(to left, #feed07, #a2ff05);
+        border-radius: 10px !important;
+    }
+
+    table.striped>tbody>tr:nth-child(odd) {
+        background-color: rgb(10 10 10) !important;;
+    }
+
+    select {display: block;
+      color: #fff;
+      background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+    padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-transition: border .3s, -webkit-box-shadow .3s;
+    transition: border .3s, -webkit-box-shadow .3s;
+    transition: box-shadow .3s, border .3s;
+    transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;}
+
+    select > option {color: #000;}
+    </style>
+
+    
+</head>
+<body class="">
+  <div class="row">
+    <div class="col l12 s12 m12 xl12 center-align">
+        <a href="index.html"><img class="responsive-img align-center" src="images/logo.png" width="250" height="250"></a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h6 class="center-align white-text"><b>Calculadora de taxas InovPay</b> </h6>
+
+    <div class="row">
+      <div class="card card-fixo">
+        <div class="center-align">
+          <a href="index.html"> <h5 class="black-text"> <i class="fa fa-arrow-left" aria-hidden="true"></i> <b>Voltar</b> </h5> </a>
+        </div>
+      </div>
+      <br />
+         
+      <form>
+          <div class="row">
+              <div class="input-field col l12 s12 m12 xl12">
+                <b>1 - Escolha a bandeira</b>
+                <select id="cartao_bandeira" name="cartao_bandeira" class="validate">
+                  <option value="mastervisa">Master</option>
+                  <option value="mastervisa">Visa</option>
+                  <option value="outros">American Express</option>
+                  <option value="outros">Hipercard</option>
+                  <option value="outros">Elo</option>
+                  <option value="outros">Outros</option>
+                </select>
+              </div>
+
+              <div class="input-field col l12 s12 m12 xl12">
+                  <b>2 - Valor da compra</b>
+                  <input placeholder="R$ 0,00 (digite somente números)" id="val_compra" type="text" class="validate">
+              </div>
+
+              <div class="input-field col l12 s12 m12 xl12">
+                  <b>3 - Entrada em dinheiro</b>
+                  <input placeholder="R$ 0,00 (caso tenha entrada, digite o valor)" id="val_entrada" type="text" class="validate">
+              </div>
+          </div>
+      </form>
+    </div> 
+
+    <div class="row">
+      <table class="centered striped">
+        <thead style="position: sticky; top: 1px; background: rgb(88 254 0 / 4%);">
+          <tr>
+            <th>PARCELAS</th>
+            <th>VALOR PARCELAS</th>
+            <th>VALOR TOTAL</th>
+          </tr>
+        </thead>
+
+        <tbody id="exibir">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Materialize JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- FontAwesome JavaScript -->
+  <script src="https://use.fontawesome.com/1155ed6c0a.js"></script>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script> -->
+
+
+    <script src="regra.js"></script>
+
+    
+</body>
+</html>

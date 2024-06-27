@@ -1,0 +1,59 @@
+body{
+    /*background: url(images/body-bg.jpg) no-repeat; */
+    color: #fff;
+    padding: 50px 0;
+    background: #000;
+    height: 100vh;
+}
+
+.card{display: flex; justify-content: center; align-items: center; margin: 0;}
+.card-insta {margin-top: 10px !important; height: 55px;}
+.card-fixo {margin-top: 30px !important; height: 55px;}
+
+.card-normal {margin-top: 10px !important; height: 55px;}
+
+.card-calculadora{background: rgb(254,237,7);
+    background: linear-gradient(90deg, rgba(254,237,7,1) 0%, rgba(162,255,5,1) 100%);}
+
+.card-calculadora a{color:#000;}
+
+.separar{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: block;
+    border: none;
+}
+
+.separar-big{
+    margin-top: 35px;
+    margin-bottom: 8px;
+    display: block;
+    border: none;
+}
+
+.card {border-radius: 10px;}
+td {border-radius: 10px;}
+
+.card-simular{
+    display: block; font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 12px;
+    -webkit-box-shadow: 0 0 20px 0 #22972e;
+    box-shadow: 0 0 20px 0 #22972e;
+}
+
+h5{
+    margin: 0.1rem 0 0.1rem 0;
+    font-size: 1.34rem;
+}
+
+.card-insta {background: linear-gradient(84.92deg, #FFC900 0%, #FF6711 30.51%, #FF1855 71.88%, #D300C5 100%);}
+.card-insta h5{color: #fff !important;}
+
+.blue.darken-1 {
+    background-color: #22972e !important;
+}
+
+input{color: #fff;}
